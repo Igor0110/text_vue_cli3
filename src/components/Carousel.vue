@@ -1,17 +1,16 @@
 <template>
     <div class="hello" :class="OOXX">
-        <div class="img"></div>
-        <div>
-            <p>{{ title }}</p>
-            <p>{{ msg }}</p>
-            <button>立即購買</button>
-        </div>
+        <Carousel v-model="value" loop>
+            <CarouselItem v-for="item in 5" key="item">
+                <img :src="require('@/assets/logo.png')" alt="" />
+            </CarouselItem>
+        </Carousel>
     </div>
 </template>
 
 <script>
 export default {
-    name: "HelloWorld",
+    name: "Carousel",
     props: {
         msg: String,
         title: String,
@@ -31,8 +30,5 @@ export default {
     height: 150px;
     width: 150px;
     background-color: cadetblue;
-}
-.testOOXX {
-    background-color: rgb(96, 14, 211);
 }
 </style>
