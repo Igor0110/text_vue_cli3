@@ -32,7 +32,4 @@ export default {
     width: 150px;
     background-color: cadetblue;
 }
-.testOOXX {
-    background-color: rgb(96, 14, 211);
-}
 </style>
